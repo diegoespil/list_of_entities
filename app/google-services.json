@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "583140754068",
+    "firebase_url": "https://entidades-f8a74.firebaseio.com",
+    "project_id": "entidades-f8a74",
+    "storage_bucket": "entidades-f8a74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583140754068:android:2b58a6bc7f514116",
+        "android_client_info": {
+          "package_name": "entities.diego.com.entities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583140754068-fdb8ag67d1r437h85ur3enr39d1mhm21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcnZmnjupZNO3JNCVWzEhkPld2j1YsRF8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
