@@ -76,6 +76,7 @@ public class EntityAdapter extends RecyclerView.Adapter<EntityAdapter.ViewHolder
         mainActivity.removeItemDatabase(listEntity.get(position));
         listEntity.remove(position);
         notifyItemRemoved(position);
+        notifyItemRangeRemoved(position,listEntity.size());
         notifyDataSetChanged();
     }
 

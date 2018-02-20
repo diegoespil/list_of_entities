@@ -118,13 +118,18 @@ public class MainActivity extends AppCompatActivity  implements
             }
         });
 
+
+
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
         if (auth != null){
             FirebaseUser currentUser = auth.getCurrentUser();
             if (currentUser != null){
                 String name = currentUser.getDisplayName();
-                Toast.makeText(MainActivity.this, "Hola "+name, Toast.LENGTH_LONG).show();
+                if (name != null)
+                    Toast.makeText(MainActivity.this, "Hola "+name, Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(MainActivity.this, "Hola "+currentUser.getEmail(), Toast.LENGTH_LONG).show();
             }
         } else {
             goLoginScreen();
@@ -453,6 +458,9 @@ public class MainActivity extends AppCompatActivity  implements
         adapter = new EntityAdapter(this, entityList);
         dataSource.setLayoutManager(new LinearLayoutManager(this));
         dataSource.setAdapter(adapter);
+        ItemTouchHelper.SimpleCallback iTouch = new EntityTouchHelper(adapter,dataSource);
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(iTouch);
+        itemTouchHelper.attachToRecyclerView(dataSource);
     }
 
     protected void orderByRating(boolean order){
